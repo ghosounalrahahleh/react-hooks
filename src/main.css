@@ -1,0 +1,18 @@
+.App{
+    margin: 50px auto 100px;
+    width: 50%;
+ 
+}
+.ui.card{
+    margin: 20px 0 !important;
+    width: 100%;
+}
+.ui.card:last-child{
+    margin-bottom: 50px;
+}
+.comment{
+    padding: 15px;
+    margin: 10px 0;
+    background-color: rgba(204, 203, 203, 0.466);
+    border-radius: 10px;
+}
