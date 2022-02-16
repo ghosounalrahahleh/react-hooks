@@ -31,7 +31,10 @@ const CommentApproval = ({
                 >
                   Approve
                 </div>
-                <div className="ui basic red button" onClick={()=>declineHandler(comment)}>
+                <div
+                  className="ui basic red button"
+                  onClick={() => declineHandler(comment)}
+                >
                   Decline
                 </div>
               </div>

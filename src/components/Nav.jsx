@@ -29,6 +29,16 @@ const Nav = ({ LoggedIn, setLoggedIn }) => {
         <NavLink to="/comments" className=" item">
           Comments
         </NavLink>
+
+        <NavLink to="/posts" className=" item">
+          Axios
+        </NavLink>
+        <NavLink to="/users" className=" item">
+          Fetch
+        </NavLink>
+        <NavLink to="/toggle" className=" item">
+          Toggle
+        </NavLink>
       </div>
     </div>
   );

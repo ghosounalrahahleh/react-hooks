@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
 
 const Register = ({ LoggedIn, setLoggedIn }) => {
   const [errors, setErrors] = useState([]);
@@ -72,17 +73,19 @@ const Register = ({ LoggedIn, setLoggedIn }) => {
         localStorage.setItem("users", JSON.stringify(newUsers));
       }
       sessionStorage.setItem("currentUser", JSON.stringify(user));
-      setLoggedIn(true);
+    
       setUser({
         name: "",
         email: "",
         password: "",
       });
+      setLoggedIn(true);
     }
   };
 
   return (
-     
+    <React.Fragment>
+    {LoggedIn ? <Navigate to='/post' replace={true} /> : ""}
     <form className="ui form" onSubmit={submitHandler}>
       <div className="field">
         <label>Full Name</label>
@@ -123,7 +126,7 @@ const Register = ({ LoggedIn, setLoggedIn }) => {
       <button className="ui button" type="submit">
         Register
       </button>
-    </form>
+    </form></React.Fragment>
   );
 };
 export default Register;

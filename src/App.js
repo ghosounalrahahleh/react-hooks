@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useImperativeHandle, useState } from "react";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Form from "./components/Form.jsx";
@@ -7,6 +7,10 @@ import Register from "./components/Register.jsx";
 import Login from "./components/Login.jsx";
 import "./main.css";
 import PostCard from "./components/PostCard.jsx";
+import Axios from "./components/Axios.jsx";
+import Fetch from "./components/Fetch.jsx";
+import UsingFetch from "./components/Fetch2.jsx";
+import ImperativeHandle from "./components/ImperativeHandle.jsx";
 
 function App() {
   const [comments, setComments] = useState([]);
@@ -51,6 +55,10 @@ function App() {
               />
             }
           />
+          <Route path="/posts" element={<Axios />} />
+          <Route path="/users" element={<Fetch />} />
+          <Route path="/toggle" element={<ImperativeHandle />} />
+          <Route path="/fetch" element={<UsingFetch  />} />
         </Routes>
       </div>
     </BrowserRouter>

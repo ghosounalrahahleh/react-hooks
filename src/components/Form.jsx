@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Comment from "./Comment.jsx";
 import CommentApproval from "./CommentApproval.jsx";
+import moment from "moment";
 import faker from "@faker-js/faker";
 const Form = ({
   comments,
@@ -29,6 +30,7 @@ const Form = ({
         name: name,
         Comment: comment,
         id: Math.random() * 1000,
+        date:moment().format("MMMM Do YYYY, h:mm:ss a"),
       },
     ]);
     setName("");
